@@ -1,0 +1,342 @@
+nav {
+    position: absolute;
+    width: 100vw !important;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    // background: white;
+
+    .banner {
+        background: var(--banner-color);
+        color: white;
+        display: flex;
+        width: 100%;
+        height: 40px;
+        align-items: center;
+
+        ul {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            list-style: none;
+            align-items: center;
+        }
+    }
+
+
+    .nav {
+        min-height: 80px;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 5%;
+
+
+        .logo {
+            font-family: var(--logo-ff);
+
+            span {
+                color: var(--accent-color);
+            }
+        }
+
+
+        .icon {
+            display: none;
+            cursor: pointer;
+        }
+
+
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+
+            .dropdown {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                margin-top: 10px;
+                left: 0;
+
+                &.dropdown2 {
+                    margin-left: 20px;
+                }
+
+                li {
+                    width: 100% !important;
+                    padding: 5px 20px;
+
+                    &:hover {
+                        background: #d3d1d165;
+
+                    }
+                }
+
+                &.opened {
+                    display: flex;
+                }
+            }
+
+
+            li {
+                cursor: pointer;
+                transition: .2s ease;
+                position: relative;
+
+                &:hover {
+                    color: var(--accent-color);
+                }
+
+                &.active {
+                    color: var(--accent-color);
+                }
+
+            }
+        }
+
+
+        .search {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+
+            input {
+                width: 200px;
+                height: 35px;
+                padding: 0 40px 0 15px;
+                border: 1px solid #ccc;
+                border-radius: 20px;
+                outline: none;
+                font-family: var(--ff);
+                transition: .3s ease;
+
+
+                &:focus {
+                    border-color: var(--accent-color);
+                }
+            }
+
+
+            i {
+                position: absolute;
+                right: 15px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
+
+/* TABLETS */
+@media (max-width: 900px) {
+
+    nav {
+        position: fixed;
+
+        .nav {
+            .dropdown {
+                display: none;
+            }
+
+
+            ul {
+                gap: 15px;
+            }
+
+            .search input {
+                width: 150px;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+/* MOBILE */
+@media (max-width:700px) {
+
+    nav {
+        .banner {
+
+            height: 35px;
+
+            ul {
+                font-size: 12px;
+            }
+        }
+
+
+
+        .nav {
+            
+            
+            position: relative;
+            min-height: 70px;
+            justify-content: space-between;
+            padding: 0 20px;
+            
+
+
+            .icon {
+                display: block;
+                order: 3;
+            }
+
+
+
+
+            >ul {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                min-height: calc(100vh - 105px);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 40px;
+                gap: 30px;
+                transform: translateX(150%);
+                transition: .4s ease;
+                
+                //glass bg:
+                background: rgba(255, 255, 255, 0.015) !important;
+                backdrop-filter: blur(3px) !important;
+                -webkit-backdrop-filter: blur(3px);
+
+                &.opened {
+                    transform: translateX(0);
+
+                }
+
+
+
+                /*
+                    DROPDOWN MOBILE FIX
+                */
+
+                .dropdown-container {
+
+                    width: 100%;
+                    text-align: center;
+
+
+
+                    span {
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 8px;
+
+                    }
+
+
+
+                    .dropdown {
+
+                        position: static;
+
+                        display: flex;
+
+                        flex-direction: column;
+
+                        align-items: center;
+
+                        width: 100%;
+
+                        max-height: 0;
+
+
+                        overflow: hidden;
+
+                        opacity: 0;
+
+                        margin: 0;
+
+                        padding: 0;
+
+                        gap: 0;
+
+                        transition: .3s ease;
+
+
+
+                        li {
+
+                            width: 100% !important;
+
+                            padding: 12px 0;
+
+                        }
+
+
+
+                        &.opened {
+
+                            max-height: 200px;
+
+                            opacity: 1;
+
+                            padding-top: 15px;
+
+                        }
+
+
+                    }
+
+                }
+
+            }
+
+
+
+
+
+            .search {
+
+                position: relative;
+                top: auto;
+                left: auto;
+
+                width: 100%;
+
+                display: flex;
+                justify-content: center;
+
+
+
+                transform: translateX(150%);
+                transition: .4s ease;
+
+                padding: 20px 0;
+
+
+                &.opened {
+
+                    transform: translateX(0);
+
+                }
+
+
+                input {
+
+                    width: 80%;
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,147 @@
+.why {
+    margin-top: 1em;
+    padding: 20px 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    .heading {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 3em;
+        position: relative;
+
+        .title {
+            max-width: 900px;
+        }
+
+        p {
+            max-width: 900px;
+        }
+    }
+
+    .cont {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        justify-content: center;
+        gap: 2em;
+        margin-top: 2em;
+
+        .reason {
+            width: 100%;
+            min-width: 0;
+            font-size: 1.3em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            position: relative;
+            padding-left: 15px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 100%;
+                background: var(--accent-color);
+                left: 0;
+                top: 0;
+            }
+
+            // &:last-child{
+            //     &::after {
+            //         content: "";
+            //         position: absolute;
+            //         width: 2px;
+            //         height: 100%;
+            //         background: var(--accent-color);
+            //         right: 0;
+            //         top: 0;
+            //     }
+            // }
+
+            .title {
+                overflow-wrap: break-word;
+            }
+
+            p {
+                overflow-wrap: break-word;
+            }
+        }
+    }
+}
+
+
+/* Large tablets / small laptops */
+@media (max-width: 1100px) {
+    .why {
+        padding: 20px 2.5em;
+
+        .cont {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 2.5em 2em;
+        }
+    }
+}
+
+
+/* Tablets */
+@media (max-width: 768px) {
+    .why {
+        padding: 20px 2em;
+
+        .heading {
+            margin-top: 2em;
+        }
+
+        .cont {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 2em 1.5em;
+
+            .reason {
+                font-size: 1.15em;
+            }
+        }
+    }
+}
+
+
+/* Phones */
+@media (max-width: 600px) {
+    .why {
+        padding: 20px 1.5em;
+        gap: 1.5em;
+
+        .heading {
+            margin-top: 1.5em;
+        }
+
+        .cont {
+            grid-template-columns: 1fr;
+            margin-top: 0;
+
+            .reason {
+                width: 100%;
+                font-size: 1.1em;
+                padding-left: 15px;
+            }
+        }
+    }
+}
+
+
+/* Very small phones */
+@media (max-width: 400px) {
+    .why {
+        padding: 20px 1em;
+
+        .cont {
+            gap: 1.5em;
+
+            .reason {
+                font-size: 1em;
+            }
+        }
+    }
+}
