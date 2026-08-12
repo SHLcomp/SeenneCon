@@ -7,6 +7,7 @@ const Industries = () => {
       <div className="heading">
         <span className="eyebrow">Industries We Serve</span>
         <h1 className="title">
+          {" "}
           Delivering Solutions Across Diverse Industries
         </h1>
         <p>
@@ -21,15 +22,13 @@ const Industries = () => {
           return (
             <div className="industry">
               <div className="img">
-                <img src={ind.img} alt={ind.name} />
+                <img src={ind.img} alt="" />
               </div>
               <div className="text">
-                  <div className="text">
-                    <h1>{ind.name}</h1>
-                    <p>{ind.desc}</p>
-                  </div>
-                </div>
+                <h1>{ind.name}</h1>
+                <p>{ind.desc}</p>
               </div>
+            </div>
           );
         })}
       </div>

@@ -1,4 +1,4 @@
-.industries {
+.services {
     display: flex;
     flex-direction: column;
     padding: 20px 4em;
@@ -7,6 +7,8 @@
     .heading {
         align-items: flex-start;
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
         gap: 10px;
         margin-top: 3em;
@@ -14,17 +16,27 @@
         font-size: 1rem;
 
         p {
-            width: 80%;
+            width: 60%;
+            text-align: center;
+        }
+
+        .cta2 {
+            border-radius: 40px;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.473);
+            position: absolute;
+            top: 70%;
+            left: 80%;
         }
     }
 
-    .cont {
+    .services-cont {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2em;
         margin-top: 1em;
 
-        .industry {
+        .service {
             width: 90%;
             height: 17vw;
             box-shadow: 4px 4px 12px;
@@ -54,14 +66,12 @@
 
             .img {
                 width: 100%;
-                height: 100%;
 
                 img {
-                    display: block;
                     height: 80%;
                     width: 100%;
                     object-fit: cover;
-                    transition: 0.3s ease;
+                    transition: .3s ease;
                 }
             }
 
@@ -70,19 +80,13 @@
                 z-index: 300;
                 position: absolute;
                 top: 80%;
-                left: 0;
                 font-size: 10px;
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
                 align-items: center;
                 width: 100%;
-                transition: 0.3s ease;
-
-                h1 {
-                    margin: 0;
-                    text-align: center;
-                }
+                transition: .3s ease;
 
                 p {
                     display: none;
@@ -90,10 +94,12 @@
                     margin-top: 1.4em;
                     padding-inline: 1em;
                 }
+
             }
         }
     }
 }
+
 
 // ================================
 // TABLET
@@ -101,35 +107,38 @@
 
 @media (max-width: 900px) {
 
-    .industries {
+    .services {
         padding: 20px 2.5em;
 
         .heading {
             p {
                 width: 85%;
             }
+
+            .cta2 {
+                left: auto;
+                right: 5%;
+            }
         }
 
-        .cont {
+        .services-cont {
             grid-template-columns: repeat(2, 1fr);
             gap: 2em;
 
-            .industry {
+            .service {
                 width: 100%;
                 height: 28vw;
             }
         }
     }
-
 }
-
 // ================================
 // MOBILE
 // ================================
 
 @media (max-width: 600px) {
 
-    .industries {
+    .services {
         padding: 20px 1.5em;
         gap: 1.5em;
 
@@ -139,49 +148,45 @@
             p {
                 width: 100%;
             }
+
+            .cta2 {
+                position: static;
+                margin-top: 5px;
+                align-self: flex-end;
+            }
         }
 
-        .cont {
+        .services-cont {
             grid-template-columns: 1fr;
             gap: 1.5em;
 
-            .industry {
+            .service {
                 width: 100%;
                 height: 60vw;
-                min-height: 220px;
                 border-radius: 30px;
 
                 .text {
                     font-size: 10px;
-
-                    p {
-                        font-size: 1.5em;
-                        margin-top: 1em;
-                    }
                 }
             }
         }
     }
-
 }
-
 // ================================
 // SMALL MOBILE
 // ================================
 
 @media (max-width: 400px) {
 
-    .industries {
+    .services {
         padding: 20px 1em;
 
-        .cont {
+        .services-cont {
 
-            .industry {
+            .service {
                 height: 65vw;
-                min-height: 210px;
                 border-radius: 25px;
             }
         }
     }
-
 }

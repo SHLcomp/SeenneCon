@@ -4,7 +4,7 @@ nav {
     top: 0;
     left: 0;
     z-index: 1000;
-    // background: white;
+
 
     .banner {
         background: var(--banner-color);
@@ -20,6 +20,8 @@ nav {
             justify-content: space-around;
             list-style: none;
             align-items: center;
+            margin: 0;
+            padding: 0;
         }
     }
 
@@ -35,6 +37,7 @@ nav {
 
         .logo {
             font-family: var(--logo-ff);
+            margin: 0;
 
             span {
                 color: var(--accent-color);
@@ -48,39 +51,18 @@ nav {
         }
 
 
-        ul {
+        /* =========================
+           MAIN NAVIGATION
+        ========================= */
+
+        > ul {
             display: flex;
             list-style: none;
             gap: 25px;
+            margin: 0;
+            padding: 0;
 
-            .dropdown {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                margin-top: 10px;
-                left: 0;
-
-                &.dropdown2 {
-                    margin-left: 20px;
-                }
-
-                li {
-                    width: 100% !important;
-                    padding: 5px 20px;
-
-                    &:hover {
-                        background: #d3d1d165;
-
-                    }
-                }
-
-                &.opened {
-                    display: flex;
-                }
-            }
-
-
-            li {
+            > li {
                 cursor: pointer;
                 transition: .2s ease;
                 position: relative;
@@ -89,13 +71,129 @@ nav {
                     color: var(--accent-color);
                 }
 
-                &.active {
+                
+            }
+
+
+            /* =========================
+               DROPDOWN TITLE
+            ========================= */
+
+            .dropdown-title {
+                display: flex;
+                align-items: center;
+                gap: 2px;
+            }
+
+
+            /*
+                Your JSX contains a <li>
+                inside .dropdown-title.
+
+                This keeps that nested li from
+                messing up the flex layout.
+            */
+
+            .dropdown-title > li {
+                position: static;
+                width: auto !important;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                &:hover {
+                    color: var(--accent-color);
+                    background: transparent;
+                }
+            }
+
+
+            .dropdown-arrow {
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-size: inherit;
+                color: inherit;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                padding: 5px;
+
+                &:hover {
                     color: var(--accent-color);
                 }
+            }
 
+
+            /* =========================
+               DROPDOWN
+            ========================= */
+
+            .dropdown {
+                display: none;
+
+                flex-direction: column;
+
+                position: absolute;
+
+                top: 100%;
+                left: 0;
+
+                margin: 10px 0 0;
+                padding: 5px 0;
+
+                min-width: 140px;
+
+                background: rgba(255, 255, 255, 0.95);
+
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+                gap: 0;
+
+
+                &.dropdown2 {
+                    margin-left: 0;
+                }
+
+
+                li {
+                    width: 100% !important;
+
+                    padding: 0;
+
+                    margin: 0;
+
+                    &:hover {
+                        background: #d3d1d165;
+                    }
+
+
+                    .a {
+                        display: block;
+                        width: 100%;
+                        padding: 8px 20px;
+                        white-space: nowrap;
+                    }
+                }
+
+
+                &.opened {
+                    display: flex;
+                }
             }
         }
 
+
+        /* =========================
+           SEARCH
+        ========================= */
 
         .search {
             display: flex;
@@ -106,11 +204,16 @@ nav {
             input {
                 width: 200px;
                 height: 35px;
+
                 padding: 0 40px 0 15px;
+
                 border: 1px solid #ccc;
                 border-radius: 20px;
+
                 outline: none;
+
                 font-family: var(--ff);
+
                 transition: .3s ease;
 
 
@@ -130,42 +233,42 @@ nav {
 }
 
 
+/* =========================================
+   TABLETS
+========================================= */
 
-
-/* TABLETS */
 @media (max-width: 900px) {
 
     nav {
         position: fixed;
 
+
         .nav {
-            .dropdown {
-                display: none;
-            }
 
-
-            ul {
+            > ul {
                 gap: 15px;
             }
 
-            .search input {
-                width: 150px;
+
+            .search {
+                input {
+                    width: 150px;
+                }
             }
         }
     }
-
 }
 
 
+/* =========================================
+   MOBILE
+========================================= */
 
-
-
-/* MOBILE */
-@media (max-width:700px) {
+@media (max-width: 700px) {
 
     nav {
-        .banner {
 
+        .banner {
             height: 35px;
 
             ul {
@@ -174,169 +277,341 @@ nav {
         }
 
 
-
         .nav {
-            
-            
             position: relative;
-            min-height: 70px;
-            justify-content: space-between;
-            padding: 0 20px;
-            
 
+            min-height: 70px;
+
+            justify-content: space-between;
+
+            padding: 0 20px;
+
+
+            /* =========================
+               MENU ICON
+            ========================= */
 
             .icon {
                 display: block;
                 order: 3;
+
+                cursor: pointer;
             }
 
 
+            /* =========================
+               MOBILE MAIN MENU
+            ========================= */
 
-
-            >ul {
+            > ul {
                 position: absolute;
+
                 top: 70px;
                 left: 0;
+
                 width: 100%;
+
+                /*
+                    Search occupies the first
+                    part of the mobile menu.
+                */
                 min-height: calc(100vh - 105px);
+
+                display: flex;
+
                 flex-direction: column;
+
                 align-items: center;
+
                 justify-content: flex-start;
-                padding-top: 40px;
-                gap: 30px;
+
+                /*
+                    IMPORTANT:
+                    This gives the search its own
+                    space without hiding Services.
+                */
+                padding: 115px 20px 40px;
+
+                margin: 0;
+
+                gap: 25px;
+
                 transform: translateX(150%);
+
                 transition: .4s ease;
-                
-                //glass bg:
+
+                overflow-y: auto;
+
+
+                // glass background
                 background: rgba(255, 255, 255, 0.015) !important;
+
                 backdrop-filter: blur(3px) !important;
                 -webkit-backdrop-filter: blur(3px);
 
+
                 &.opened {
                     transform: translateX(0);
-
                 }
 
+
+                /* =========================
+                   DROPDOWN CONTAINER
+                ========================= */
+
+                .dropdown-container {
+                    width: 100%;
+
+                    display: flex;
+
+                    flex-direction: column;
+
+                    align-items: center;
+
+                    text-align: center;
+
+                    position: relative;
+                }
+
+
+                /* =========================
+                   DROPDOWN TITLE
+                ========================= */
+
+                .dropdown-title {
+                    display: flex;
+
+                    align-items: center;
+
+                    justify-content: center;
+
+                    gap: 7px;
+
+                    width: auto;
+                }
 
 
                 /*
-                    DROPDOWN MOBILE FIX
+                    Fix the <li> inside
+                    .dropdown-title from
+                    affecting the layout.
                 */
 
-                .dropdown-container {
+                .dropdown-title > li {
+                    display: flex;
+
+                    align-items: center;
+
+                    width: auto !important;
+
+                    padding: 0;
+
+                    margin: 0;
+
+                    position: static;
+                }
+
+
+                .dropdown-arrow {
+                    display: flex;
+
+                    align-items: center;
+
+                    justify-content: center;
+
+                    padding: 6px;
+
+                    background: none;
+
+                    border: none;
+
+                    color: inherit;
+
+                    cursor: pointer;
+
+
+                    i {
+                        font-size: 11px;
+                    }
+                }
+
+
+                /* =========================
+                   MOBILE DROPDOWN
+                ========================= */
+
+                .dropdown {
+                    position: static;
+
+                    display: flex;
+
+                    flex-direction: column;
+
+                    align-items: center;
 
                     width: 100%;
-                    text-align: center;
+
+                    max-height: 0;
+
+                    overflow: hidden;
+
+                    opacity: 0;
+
+                    visibility: hidden;
+
+                    margin: 0;
+
+                    padding: 0;
+
+                    gap: 0;
+
+                    background: transparent;
+
+                    box-shadow: none;
+
+                    backdrop-filter: none;
+
+                    -webkit-backdrop-filter: none;
+
+                    transition:
+                        max-height .3s ease,
+                        opacity .25s ease,
+                        visibility .25s ease,
+                        padding .3s ease;
 
 
+                    &.opened {
+                        max-height: 200px;
 
-                    span {
+                        opacity: 1;
 
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 8px;
+                        visibility: visible;
 
+                        padding-top: 10px;
                     }
 
 
-
-                    .dropdown {
-
-                        position: static;
-
-                        display: flex;
-
-                        flex-direction: column;
-
-                        align-items: center;
-
-                        width: 100%;
-
-                        max-height: 0;
-
-
-                        overflow: hidden;
-
-                        opacity: 0;
-
-                        margin: 0;
+                    li {
+                        width: 100% !important;
 
                         padding: 0;
 
-                        gap: 0;
+                        margin: 0;
 
-                        transition: .3s ease;
+                        text-align: center;
 
 
-
-                        li {
-
-                            width: 100% !important;
-
-                            padding: 12px 0;
-
+                        &:hover {
+                            background: transparent;
                         }
 
 
+                        .a {
+                            display: block;
 
-                        &.opened {
+                            width: 100%;
 
-                            max-height: 200px;
-
-                            opacity: 1;
-
-                            padding-top: 15px;
-
+                            padding: 8px 0;
                         }
-
-
                     }
-
                 }
-
             }
 
 
-
-
+            /* =========================
+               MOBILE SEARCH
+            ========================= */
 
             .search {
+                position: absolute;
 
-                position: relative;
-                top: auto;
-                left: auto;
+                /*
+                    Search sits directly below
+                    the 70px navbar.
+                */
+                top: 70px;
+
+                left: 0;
 
                 width: 100%;
 
+                height: 75px;
+
                 display: flex;
+
+                align-items: center;
+
                 justify-content: center;
 
+                padding: 15px 20px;
 
+                z-index: 5;
 
                 transform: translateX(150%);
-                transition: .4s ease;
 
-                padding: 20px 0;
+                transition: .4s ease;
 
 
                 &.opened {
-
                     transform: translateX(0);
-
                 }
 
 
                 input {
-
                     width: 80%;
 
+                    height: 40px;
                 }
 
-            }
 
+                i {
+                    right: calc(10% + 15px);
+                }
+            }
+        }
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 400px) {
+
+    nav {
+
+        .banner {
+
+            ul {
+                font-size: 11px;
+            }
         }
 
-    }
 
+        .nav {
+
+            padding: 0 15px;
+
+
+            .logo {
+                font-size: 24px;
+            }
+
+
+            > ul {
+                padding-top: 105px;
+
+                gap: 22px;
+            }
+
+
+            .search {
+
+                input {
+                    width: 82%;
+                }
+            }
+        }
+    }
 }

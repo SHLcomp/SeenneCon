@@ -8,11 +8,9 @@ const Navbar = () => {
   const [openServices, setOpenServices] = useState(false);
   const [openProducts, setOpenProducts] = useState(false);
 
-
   const toggleMenu = () => {
     setOpenMenu((prev) => !prev);
   };
-
 
   return (
     <nav>
@@ -23,7 +21,6 @@ const Navbar = () => {
         </ul>
       </div>
 
-
       <div className="nav">
 
         <Link className="a" to="/">
@@ -32,103 +29,111 @@ const Navbar = () => {
           </h1>
         </Link>
 
-
         <i
-          className={`fa-solid ${openMenu ? "fa-xmark" : "fa-bars"} fa-xl icon`}
+          className={`fa-solid ${
+            openMenu ? "fa-xmark" : "fa-bars"
+          } fa-xl icon`}
           onClick={toggleMenu}
         />
 
-
         <ul className={openMenu ? "opened" : ""}>
 
-
           {/* SERVICES */}
-          <li 
-            className="dropdown-container"
-            onClick={() => setOpenServices(!openServices)}
-          >
+          <li className="dropdown-container">
 
-            <span>
-              Services
+            <div className="dropdown-title">
+             <li> <Link className="a" to="/services">
+                Services
+              </Link>
 
-              <i
-                className={`fa-solid ${
-                  openServices 
-                  ? "fa-chevron-up" 
-                  : "fa-chevron-down"
-                }`}
-              />
-            </span>
+              <button
+                type="button"
+                className="dropdown-arrow"
+                onClick={() => setOpenServices((prev) => !prev)}
+                aria-label="Toggle Services menu"
+              >
+                <i
+                  className={`fa-solid ${
+                    openServices
+                      ? "fa-chevron-up"
+                      : "fa-chevron-down"
+                  }`}
+                />
+              </button></li>
+            </div>
 
-
-            <ul className={`dropdown ${openServices ? "opened" : ""}`}>
-
+            <ul
+              className={`dropdown ${
+                openServices ? "opened" : ""
+              }`}
+            >
               <li>
                 <Link className="a" to="/services/residential">
                   Residential
                 </Link>
               </li>
 
-
               <li>
                 <Link className="a" to="/services/commercial">
                   Commercial
                 </Link>
               </li>
-
             </ul>
 
           </li>
 
 
-
-
           {/* PRODUCTS */}
-          <li 
-            className="dropdown-container"
-            onClick={() => setOpenProducts(!openProducts)}
-          >
+          <li className="dropdown-container">
 
-            <span>
-              Products
+            <div className="dropdown-title">
+              <li><Link className="a" to="/products">
+                Products
+              </Link></li>
 
-              <i
-                className={`fa-solid ${
-                  openProducts
-                  ? "fa-chevron-up"
-                  : "fa-chevron-down"
-                }`}
-              />
-            </span>
+              <button
+                type="button"
+                className="dropdown-arrow"
+                onClick={() => setOpenProducts((prev) => !prev)}
+                aria-label="Toggle Products menu"
+              >
+                <i
+                  className={`fa-solid ${
+                    openProducts
+                      ? "fa-chevron-up"
+                      : "fa-chevron-down"
+                  }`}
+                />
+              </button>
+            </div>
 
-
-            <ul className={`dropdown dropdown2 ${openProducts ? "opened" : ""}`}>
-
+            <ul
+              className={`dropdown dropdown2 ${
+                openProducts ? "opened" : ""
+              }`}
+            >
               <li>
                 <Link className="a" to="/products/doors">
                   Doors
                 </Link>
               </li>
 
-
               <li>
                 <Link className="a" to="/products/windows">
                   Windows
                 </Link>
               </li>
-
             </ul>
 
           </li>
 
 
-
+          {/* OTHER LINKS */}
           <li>
             <Link to="/" className="a">
               Projects
             </Link>
           </li>
-
 
           <li>
             <Link to="/" className="a">
@@ -136,16 +141,13 @@ const Navbar = () => {
             </Link>
           </li>
 
-
           <li>
             <Link to="/" className="a">
               Contact
             </Link>
           </li>
 
-
         </ul>
-
 
 
         <div className={`search ${openMenu ? "opened" : ""}`}>
@@ -158,7 +160,6 @@ const Navbar = () => {
 
           <i className="fa-solid fa-magnifying-glass"></i>
         </div>
-
 
       </div>
     </nav>
