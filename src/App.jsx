@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home'
 import Services from './pages/Services'
+import ServicesFilter from './componenets/filters/ServicesFilter'
 
 function App() {
   const router = createBrowserRouter([
@@ -14,7 +15,8 @@ function App() {
       element: <Services />
     },
     {
-      path: ""
+      path: "/services/:serviceId",
+      element: <ServicesFilter />
     }
   ])
 
