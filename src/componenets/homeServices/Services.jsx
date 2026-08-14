@@ -21,7 +21,7 @@ const Services = () => {
           return (
             <div className="service">
               <div className="img">
-                <img src={service.gallery[0]} alt="" />
+                <img src={service.gallery[0]} alt={service.title} loading="lazy"/>
               </div>
               <div className="text">
                 <h1>

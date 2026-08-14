@@ -22,7 +22,7 @@ const Industries = () => {
           return (
             <div className="industry">
               <div className="img">
-                <img src={ind.img} alt="" />
+                <img src={ind.img} alt={ind.name} loading="lazy" />
               </div>
               <div className="text">
                 <h1>{ind.name}</h1>
