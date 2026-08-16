@@ -1,14 +1,21 @@
-.headingDiv{
+.headingDiv {
     margin-top: 10em;
     padding: 20px 4em;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    h1, p{
+
+    h1 {
+        font-size: clamp(20px, 3em, 4em);
+    }
+
+    h1,
+    p {
         width: 50%;
     }
-    &::after{
+
+    &::after {
         content: "";
         position: absolute;
         top: 100%;
@@ -21,16 +28,23 @@
 }
 
 @media (max-width:900px) {
-    .headingDiv{
-        h1,p{
+    .headingDiv {
+
+        h1,
+        p {
             width: 100%;
         }
     }
 }
 
 @media (max-width:600px) {
-    .headingDiv{
+
+    .headingDiv {
         padding: 20px;
         margin-top: 7em;
+
+        h1 {
+            font-size: 2em;
+        }
     }
 }

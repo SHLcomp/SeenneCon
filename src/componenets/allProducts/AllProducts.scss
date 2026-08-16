@@ -1,0 +1,98 @@
+.allProd {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 3em;
+
+    .heading {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 3em;
+        text-align: center;
+    }
+
+    .filtering {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 50px;
+        padding-bottom: 30px;
+
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+
+        .option {
+            display: flex;
+            flex-direction: column;
+
+            gap: 10px;
+
+            min-width: 180px;
+
+            label {
+                font-size: 0.7rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+
+                opacity: 0.5;
+            }
+
+            select {
+                appearance: none;
+
+                width: 100%;
+
+                padding: 13px 40px 13px 15px;
+
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: 0;
+
+                background-color: transparent;
+
+                font-family: inherit;
+                font-size: 0.9rem;
+
+                cursor: pointer;
+
+                transition: border-color 0.3s ease;
+
+                &:hover,
+                &:focus {
+                    border-color: currentColor;
+                    outline: none;
+                }
+            }
+        }
+
+
+        .clear-filters {
+            padding: 13px 20px;
+
+            border: 1px solid rgba(0, 0, 0, 0.2);
+
+            background: transparent;
+
+            font-family: inherit;
+            font-size: 0.8rem;
+
+            cursor: pointer;
+
+            transition:
+                background 0.3s ease,
+                color 0.3s ease;
+
+            &:hover {
+                background: #111;
+                color: white;
+            }
+        }
+    }
+}

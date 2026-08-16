@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import { useState } from "react";
+import services from "../../data/services"; // adjust path if necessary
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -23,12 +24,14 @@ const Navbar = () => {
 
       <div className="nav">
 
+        {/* LOGO */}
         <Link className="a" to="/">
           <h1 className="logo">
             Seenne<span>Con</span>
           </h1>
         </Link>
 
+        {/* MOBILE MENU BUTTON */}
         <i
           className={`fa-solid ${
             openMenu ? "fa-xmark" : "fa-bars"
@@ -38,19 +41,22 @@ const Navbar = () => {
 
         <ul className={openMenu ? "opened" : ""}>
 
-          {/* SERVICES */}
+          {/* ================= SERVICES ================= */}
           <li className="dropdown-container">
 
             <div className="dropdown-title">
-             <li> <Link className="a" to="/services">
+              <Link className="a" to="/services">
                 Services
               </Link>
 
               <button
                 type="button"
                 className="dropdown-arrow"
-                onClick={() => setOpenServices((prev) => !prev)}
+                onClick={() =>
+                  setOpenServices((prev) => !prev)
+                }
                 aria-label="Toggle Services menu"
+                aria-expanded={openServices}
               >
                 <i
                   className={`fa-solid ${
@@ -59,7 +65,7 @@ const Navbar = () => {
                       : "fa-chevron-down"
                   }`}
                 />
-              </button></li>
+              </button>
             </div>
 
             <ul
@@ -67,35 +73,37 @@ const Navbar = () => {
                 openServices ? "opened" : ""
               }`}
             >
-              <li>
-                <Link className="a" to="/services/residential">
-                  Residential
-                </Link>
-              </li>
-
-              <li>
-                <Link className="a" to="/services/commercial">
-                  Commercial
-                </Link>
-              </li>
+              {services.map((service) => (
+                <li key={service.id}>
+                  <Link
+                    className="a"
+                    to={`/services/${service.slug}`}
+                  >
+                    {service.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
 
           </li>
 
 
-          {/* PRODUCTS */}
+          {/* ================= PRODUCTS ================= */}
           <li className="dropdown-container">
 
             <div className="dropdown-title">
-              <li><Link className="a" to="/products">
+              <Link className="a" to="/products">
                 Products
-              </Link></li>
+              </Link>
 
               <button
                 type="button"
                 className="dropdown-arrow"
-                onClick={() => setOpenProducts((prev) => !prev)}
+                onClick={() =>
+                  setOpenProducts((prev) => !prev)
+                }
                 aria-label="Toggle Products menu"
+                aria-expanded={openProducts}
               >
                 <i
                   className={`fa-solid ${
@@ -113,13 +121,19 @@ const Navbar = () => {
               }`}
             >
               <li>
-                <Link className="a" to="/products/doors">
+                <Link
+                  className="a"
+                  to="/products/doors"
+                >
                   Doors
                 </Link>
               </li>
 
               <li>
-                <Link className="a" to="/products/windows">
+                <Link
+                  className="a"
+                  to="/products/windows"
+                >
                   Windows
                 </Link>
               </li>
@@ -128,7 +142,7 @@ const Navbar = () => {
           </li>
 
 
-          {/* OTHER LINKS */}
+          {/* ================= OTHER LINKS ================= */}
           <li>
             <Link to="/" className="a">
               Projects
@@ -150,6 +164,7 @@ const Navbar = () => {
         </ul>
 
 
+        {/* SEARCH */}
         <div className={`search ${openMenu ? "opened" : ""}`}>
           <input
             type="search"

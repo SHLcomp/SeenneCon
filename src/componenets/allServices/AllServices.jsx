@@ -1,6 +1,6 @@
 import "./AllServices.scss";
 import data from "../../data/services";
-import { Link } from "react-router-dom";
+import Service from "../serviceComp/Service";
 
 const AllServices = () => {
   return (
@@ -17,17 +17,7 @@ const AllServices = () => {
       <div className="services-cont">
         {data.map((service) => {
           return (
-            <Link to={`/services/${service.slug}`} className="a">
-              <div className="service">
-                <div className="img">
-                  <img src={service.gallery[0]} alt="" />
-                </div>
-                <div className="text">
-                  <h1>{service.title}</h1>
-                  <p>{service.description}</p>
-                </div>
-              </div>
-            </Link>
+            <Service service={service}/>
           );
         })}
       </div>

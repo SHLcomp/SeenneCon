@@ -1,5 +1,6 @@
 import "./Services.scss";
 import data from "../../data/services.js";
+import Service from "../serviceComp/Service.jsx";
 
 const Services = () => {
   const newData = data.filter((item)=> item.featured);
@@ -19,17 +20,7 @@ const Services = () => {
       <div className="services-cont">
         {newData.map((service)=>{
           return (
-            <div className="service">
-              <div className="img">
-                <img src={service.gallery[0]} alt={service.title} loading="lazy"/>
-              </div>
-              <div className="text">
-                <h1>
-                  {service.title}
-                </h1>
-                <p>{service.description}</p>
-              </div>
-            </div>
+            <Service service={service}/>
           )
         })}
       </div>
