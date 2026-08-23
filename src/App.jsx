@@ -4,6 +4,8 @@ import Home from './pages/Home'
 import Services from './pages/Services'
 import ServicesFilter from './componenets/filters/ServicesFilter'
 import Products from './pages/Products'
+import Projects from './pages/Projects'
+import ProductsFilter from './componenets/filters/ProductsFilter'
 
 function App() {
   const router = createBrowserRouter([
@@ -20,9 +22,22 @@ function App() {
       element: <ServicesFilter />
     },
     {
+      path: "/products/:prodId",
+      element:<ProductsFilter />
+    },
+    {
       path: "/products",
-      element:<Products />
-    }
+      element: < Products />
+    },
+    {
+      path:"/projects",
+      element: <Projects />
+    },
+    {
+      path: "/projects/:projId",
+      // element:<ProductsFilter />
+    },
+  
   ])
 
   return (

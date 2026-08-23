@@ -144,7 +144,7 @@ const Navbar = () => {
 
           {/* ================= OTHER LINKS ================= */}
           <li>
-            <Link to="/" className="a">
+            <Link to="/projects" className="a">
               Projects
             </Link>
           </li>
