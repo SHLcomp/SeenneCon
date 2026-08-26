@@ -16,7 +16,7 @@
     flex-direction: column;
     justify-content: flex-end;
 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid var(--accent-color);
 
     .heading {
       margin-top: 0;
@@ -66,7 +66,7 @@
 
     padding: 9em 6vw;
 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid var(--accent-color);
   }
 
   .introContent {
@@ -109,7 +109,7 @@
 
     padding: 9em 6vw;
 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid var(--accent-color);
   }
 
   .valuesContent {
@@ -200,15 +200,20 @@
 // =========================================================
 // TABLET
 // =========================================================
+@media (max-width: 1024px) and (min-width: 901px) {
+  .about{
+    
+    .aboutHero{
+      min-height: fit-content;
+    }
+  }
+}
 
 @media (max-width: 900px) {
   .about {
-    background: pink; // TEST
-
     .aboutHero {
-      padding: 4em 4vw 6em;
-      background: pink !important; // TEST
-
+      width: 100%;
+      min-height: fit-content;
       .heroText {
         margin-left: 15%;
       }
@@ -240,7 +245,6 @@
     margin-top: 7em;
 
     .aboutHero {
-      min-height: 70vh;
       padding: 3em 1.2em 5em;
 
       .heading {

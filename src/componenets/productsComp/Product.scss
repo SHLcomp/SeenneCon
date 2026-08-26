@@ -107,6 +107,13 @@
 // =========================
 // TABLET
 // =========================
+@media (max-width: 1024px) and (min-width: 901px) {
+    .cont-product {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px;
+
+    }
+}
 
 @media (max-width: 900px) {
     .cont-product {

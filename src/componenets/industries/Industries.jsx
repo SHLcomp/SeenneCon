@@ -1,5 +1,6 @@
 import "./Industries.scss";
 import data from "../../data/indusrties";
+import Industry from "../industryComp/Industry";
 
 const Industries = () => {
   return (
@@ -20,7 +21,12 @@ const Industries = () => {
       <div className="cont">
         {data.map((ind) => {
           return (
-            <div className="industry">
+            <Industry industry={ind}/>
+          );
+        })}
+
+        {/* 
+        <div className="industry">
               <div className="img">
                 <img src={ind.img} alt={ind.name} loading="lazy" />
               </div>
@@ -29,8 +35,7 @@ const Industries = () => {
                 <p>{ind.desc}</p>
               </div>
             </div>
-          );
-        })}
+        */}
       </div>
     </div>
   );

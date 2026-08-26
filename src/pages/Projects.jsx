@@ -1,17 +1,17 @@
 import AllProjects from "../componenets/allProjects/AllProjects";
 import Heading from "../componenets/heading/Heading";
 import Navbar from "../componenets/navbar/Navbar";
-import Footer from "../componenets/footer/Footer.jsx"
+import Footer from "../componenets/footer/Footer.jsx";
 
 const Projects = () => {
   return (
     <div>
       <Navbar />
       <Heading
-        eyebrow={"Our Products"}
-        title={"Find the Right Products for Your Project."}
+        eyebrow={"Our Projects"}
+        title={"Spaces Designed to Make an Impact."}
         desc={
-          "Browse our collection of carefully selected products, compare options, and discover materials that combine durability, functionality, and outstanding design."
+          "Explore a selection of our completed and ongoing projects, showcasing thoughtful design, quality craftsmanship, and solutions built around each project's unique vision."
         }
       />
       <AllProjects />

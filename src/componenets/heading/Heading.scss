@@ -27,6 +27,16 @@
     }
 }
 
+@media (max-width: 1024px) and (min-width: 901px) {
+    .headingDiv {
+
+        h1,
+        p {
+            width: 90%;
+        }
+    }
+}
+
 @media (max-width:900px) {
     .headingDiv {
 

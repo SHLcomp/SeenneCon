@@ -7,7 +7,6 @@ const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const [openServices, setOpenServices] = useState(false);
-  const [openProducts, setOpenProducts] = useState(false);
 
   const toggleMenu = () => {
     setOpenMenu((prev) => !prev);
@@ -23,7 +22,6 @@ const Navbar = () => {
       </div>
 
       <div className="nav">
-
         {/* LOGO */}
         <Link className="a" to="/">
           <h1 className="logo">
@@ -33,17 +31,13 @@ const Navbar = () => {
 
         {/* MOBILE MENU BUTTON */}
         <i
-          className={`fa-solid ${
-            openMenu ? "fa-xmark" : "fa-bars"
-          } fa-xl icon`}
+          className={`fa-solid ${openMenu ? "fa-xmark" : "fa-bars"} fa-xl icon`}
           onClick={toggleMenu}
         />
 
         <ul className={openMenu ? "opened" : ""}>
-
           {/* ================= SERVICES ================= */}
           <li className="dropdown-container">
-
             <div className="dropdown-title">
               <Link className="a" to="/services">
                 Services
@@ -52,95 +46,34 @@ const Navbar = () => {
               <button
                 type="button"
                 className="dropdown-arrow"
-                onClick={() =>
-                  setOpenServices((prev) => !prev)
-                }
+                onClick={() => setOpenServices((prev) => !prev)}
                 aria-label="Toggle Services menu"
                 aria-expanded={openServices}
               >
                 <i
                   className={`fa-solid ${
-                    openServices
-                      ? "fa-chevron-up"
-                      : "fa-chevron-down"
+                    openServices ? "fa-chevron-up" : "fa-chevron-down"
                   }`}
                 />
               </button>
             </div>
 
-            <ul
-              className={`dropdown ${
-                openServices ? "opened" : ""
-              }`}
-            >
+            <ul className={`dropdown ${openServices ? "opened" : ""}`}>
               {services.map((service) => (
                 <li key={service.id}>
-                  <Link
-                    className="a"
-                    to={`/services/${service.slug}`}
-                  >
+                  <Link className="a" to={`/services/${service.slug}`}>
                     {service.title}
                   </Link>
                 </li>
               ))}
             </ul>
-
           </li>
 
-
-          {/* ================= PRODUCTS ================= */}
-          <li className="dropdown-container">
-
-            <div className="dropdown-title">
-              <Link className="a" to="/products">
-                Products
-              </Link>
-
-              <button
-                type="button"
-                className="dropdown-arrow"
-                onClick={() =>
-                  setOpenProducts((prev) => !prev)
-                }
-                aria-label="Toggle Products menu"
-                aria-expanded={openProducts}
-              >
-                <i
-                  className={`fa-solid ${
-                    openProducts
-                      ? "fa-chevron-up"
-                      : "fa-chevron-down"
-                  }`}
-                />
-              </button>
-            </div>
-
-            <ul
-              className={`dropdown dropdown2 ${
-                openProducts ? "opened" : ""
-              }`}
-            >
-              <li>
-                <Link
-                  className="a"
-                  to="/products/doors"
-                >
-                  Doors
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  className="a"
-                  to="/products/windows"
-                >
-                  Windows
-                </Link>
-              </li>
-            </ul>
-
+          <li>
+            <Link className="a" to="/products">
+              Products
+            </Link>
           </li>
-
 
           {/* ================= OTHER LINKS ================= */}
           <li>
@@ -160,9 +93,7 @@ const Navbar = () => {
               Contact
             </Link>
           </li>
-
         </ul>
-
 
         {/* SEARCH */}
         <div className={`search ${openMenu ? "opened" : ""}`}>
@@ -175,7 +106,6 @@ const Navbar = () => {
 
           <i className="fa-solid fa-magnifying-glass"></i>
         </div>
-
       </div>
     </nav>
   );

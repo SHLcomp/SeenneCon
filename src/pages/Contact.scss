@@ -17,7 +17,7 @@
     flex-direction: column;
     justify-content: flex-end;
 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid var(--accent-color);
 
     .heading {
       margin-top: 0;
@@ -202,11 +202,20 @@
 // =========================================================
 // TABLET
 // =========================================================
+@media (max-width: 1024px) and (min-width: 901px) {
+  .contact{
+    
+    .contactHero{
+      min-height: fit-content;
+    }
+  }
+}
 
 @media (max-width: 900px) {
   .contact {
     .contactHero {
       padding: 4em 4vw 6em;
+      min-height: fit-content;
 
       > p {
         margin-left: 15%;
@@ -233,7 +242,6 @@
     margin-top: 7em;
 
     .contactHero {
-      min-height: 65vh;
 
       padding: 3em 1.2em 5em;
 
