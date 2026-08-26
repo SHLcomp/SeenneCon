@@ -1,9 +1,9 @@
 const products = [
-// =====================================================
-// WINDOWS
-// =====================================================
+  // =====================================================
+  // WINDOWS
+  // =====================================================
 
-{
+  {
     id: 1,
     title: "Elegance 80",
     category: "Windows",
@@ -12,41 +12,42 @@ const products = [
     material: "PVC",
     opening: "Tilt & Turn",
     slug: "elegance-80",
-    desc:
-        "A high-performance PVC window system designed for homes requiring strong insulation, durability, and reliable everyday operation.",
+    desc: "A high-performance PVC window system designed for homes requiring strong insulation, durability, and reliable everyday operation.",
     features: [
-        "80 mm profile width",
-        "3 sealing system",
-        "High wind resistance",
-        "Thermal insulation",
-        "Tilt & turn opening"
+      "80 mm profile width",
+      "3 sealing system",
+      "High wind resistance",
+      "Thermal insulation",
+      "Tilt & turn opening",
     ],
     performance: {
-        thermalInsulation: "High",
-        soundInsulation: "Up to 40 dB",
-        security: "Enhanced",
-        maintenance: "Low"
+      thermalInsulation: "High",
+      soundInsulation: "Up to 40 dB",
+      security: "Enhanced",
+      maintenance: "Low",
     },
-    colors: [
-        "White",
-        "Anthracite",
-        "Golden Oak",
-        "Walnut"
-    ],
-    applications: [
-        "Houses",
-        "Apartments",
-        "Villas",
-        "Residential renovations"
-    ],
+    colors: ["White", "Anthracite", "Golden Oak", "Walnut"],
+    applications: ["Houses", "Apartments", "Villas", "Residential renovations"],
     featured: true,
     images: [
-        "https://images.pexels.com/photos/14473771/pexels-photo-14473771.jpeg",
-        "https://images.pexels.com/photos/30020797/pexels-photo-30020797.jpeg"
-    ]
-},
+      "https://images.pexels.com/photos/14473771/pexels-photo-14473771.jpeg",
+      "https://images.pexels.com/photos/30020797/pexels-photo-30020797.jpeg",
+    ],
+    specifications: [
+      { name: "Profile Width", value: "80 mm" },
+      { name: "Opening Type", value: "Tilt & Turn" },
+      { name: "Material", value: "PVC" },
+      { name: "Sealing System", value: "3 Seals" },
+      { name: "Air Permeability", value: "Class 4" },
+      { name: "Water Tightness", value: "Class 9A" },
+      { name: "Wind Load Resistance", value: "Class C3" },
+      { name: "Sound Insulation", value: "Up to 40 dB" },
+      { name: "Thermal Insulation", value: "High" },
+      { name: "Glazing Thickness", value: "20–24 mm" },
+    ],
+  },
 
-{
+  {
     id: 2,
     title: "Redonit 85",
     category: "Windows",
@@ -55,42 +56,48 @@ const products = [
     material: "PVC",
     opening: "Tilt & Turn",
     slug: "redonit-85",
-    desc:
-        "A premium PVC window system developed for prestigious residential and commercial projects where insulation, durability, and refined aesthetics are priorities.",
+    desc: "A premium PVC window system developed for prestigious residential and commercial projects where insulation, durability, and refined aesthetics are priorities.",
     features: [
-        "85 mm profile width",
-        "3 sealing system",
-        "Class A wall thickness",
-        "High thermal insulation",
-        "Enhanced wind resistance"
+      "85 mm profile width",
+      "3 sealing system",
+      "Class A wall thickness",
+      "High thermal insulation",
+      "Enhanced wind resistance",
     ],
     performance: {
-        thermalInsulation: "Very High",
-        soundInsulation: "Up to 40 dB",
-        security: "High",
-        maintenance: "Low"
+      thermalInsulation: "Very High",
+      soundInsulation: "Up to 40 dB",
+      security: "High",
+      maintenance: "Low",
     },
-    colors: [
-        "White",
-        "Anthracite",
-        "Black",
-        "Golden Oak",
-        "Walnut"
-    ],
+    colors: ["White", "Anthracite", "Black", "Golden Oak", "Walnut"],
     applications: [
-        "Luxury residences",
-        "Villas",
-        "Hotels",
-        "Commercial buildings"
+      "Luxury residences",
+      "Villas",
+      "Hotels",
+      "Commercial buildings",
     ],
     featured: true,
     images: [
-        "https://images.pexels.com/photos/9301045/pexels-photo-9301045.jpeg",
-        "https://images.pexels.com/photos/30650314/pexels-photo-30650314.jpeg"
-    ]
-},
+      "https://images.pexels.com/photos/9301045/pexels-photo-9301045.jpeg",
+      "https://images.pexels.com/photos/30650314/pexels-photo-30650314.jpeg",
+    ],
+    specifications: [
+      { name: "Profile Width", value: "85 mm" },
+      { name: "Opening Type", value: "Tilt & Turn" },
+      { name: "Material", value: "PVC" },
+      { name: "Profile Class", value: "Class A" },
+      { name: "Sealing System", value: "3 Seals" },
+      { name: "Air Permeability", value: "Class 4" },
+      { name: "Water Tightness", value: "Class 9A" },
+      { name: "Wind Load Resistance", value: "Class C4" },
+      { name: "Sound Insulation", value: "Up to 40 dB" },
+      { name: "Thermal Insulation", value: "Very High" },
+      { name: "Glazing Thickness", value: "20–44 mm" },
+    ],
+  },
 
-{
+  {
     id: 3,
     title: "Selenit 75",
     category: "Windows",
@@ -99,41 +106,43 @@ const products = [
     material: "PVC",
     opening: "Tilt & Turn",
     slug: "selenit-75",
-    desc:
-        "A balanced PVC window solution offering dependable insulation, clean aesthetics, and practical everyday performance.",
+    desc: "A balanced PVC window solution offering dependable insulation, clean aesthetics, and practical everyday performance.",
     features: [
-        "75 mm profile width",
-        "Multi-chamber profile",
-        "Center sealing system",
-        "Energy-efficient design",
-        "Tilt & turn operation"
+      "75 mm profile width",
+      "Multi-chamber profile",
+      "Center sealing system",
+      "Energy-efficient design",
+      "Tilt & turn operation",
     ],
     performance: {
-        thermalInsulation: "High",
-        soundInsulation: "Up to 38 dB",
-        security: "Enhanced",
-        maintenance: "Low"
+      thermalInsulation: "High",
+      soundInsulation: "Up to 38 dB",
+      security: "Enhanced",
+      maintenance: "Low",
     },
-    colors: [
-        "White",
-        "Anthracite",
-        "Golden Oak",
-        "Walnut"
-    ],
-    applications: [
-        "Apartments",
-        "Houses",
-        "Offices",
-        "Renovation projects"
-    ],
+    colors: ["White", "Anthracite", "Golden Oak", "Walnut"],
+    applications: ["Apartments", "Houses", "Offices", "Renovation projects"],
     featured: true,
     images: [
-        "https://images.pexels.com/photos/19013702/pexels-photo-19013702.jpeg",
-        "https://images.pexels.com/photos/1005477/pexels-photo-1005477.jpeg"
-    ]
-},
+      "https://images.pexels.com/photos/19013702/pexels-photo-19013702.jpeg",
+      "https://images.pexels.com/photos/1005477/pexels-photo-1005477.jpeg",
+    ],
+    specifications: [
+      { name: "Profile Width", value: "75 mm" },
+      { name: "Opening Type", value: "Tilt & Turn" },
+      { name: "Material", value: "PVC" },
+      { name: "Profile Design", value: "Multi-Chamber" },
+      { name: "Sealing System", value: "Center Seal" },
+      { name: "Air Permeability", value: "Class 4" },
+      { name: "Water Tightness", value: "Class 8A" },
+      { name: "Wind Load Resistance", value: "Class C3" },
+      { name: "Sound Insulation", value: "Up to 38 dB" },
+      { name: "Thermal Insulation", value: "High" },
+      { name: "Glazing Thickness", value: "20–40 mm" },
+    ],
+  },
 
-{
+  {
     id: 4,
     title: "Selenit 75 Strong",
     category: "Windows",
@@ -142,39 +151,47 @@ const products = [
     material: "PVC",
     opening: "Tilt & Turn",
     slug: "selenit-75-strong",
-    desc:
-        "A reinforced version of the Selenit platform designed for projects requiring additional structural performance and long-term durability.",
+    desc: "A reinforced version of the Selenit platform designed for projects requiring additional structural performance and long-term durability.",
     features: [
-        "75 mm profile width",
-        "Reinforced construction",
-        "Enhanced wind resistance",
-        "Improved structural strength",
-        "Tilt & turn operation"
+      "75 mm profile width",
+      "Reinforced construction",
+      "Enhanced wind resistance",
+      "Improved structural strength",
+      "Tilt & turn operation",
     ],
     performance: {
-        thermalInsulation: "High",
-        soundInsulation: "Up to 38 dB",
-        security: "High",
-        maintenance: "Low"
+      thermalInsulation: "High",
+      soundInsulation: "Up to 38 dB",
+      security: "High",
+      maintenance: "Low",
     },
-    colors: [
-        "White",
-        "Anthracite",
-        "Golden Oak"
-    ],
+    colors: ["White", "Anthracite", "Golden Oak"],
     applications: [
-        "Large residences",
-        "High-rise apartments",
-        "Commercial projects"
+      "Large residences",
+      "High-rise apartments",
+      "Commercial projects",
     ],
     featured: false,
     images: [
-        "https://images.pexels.com/photos/31375756/pexels-photo-31375756.jpeg",
-        "https://images.pexels.com/photos/37060539/pexels-photo-37060539.jpeg"
-    ]
-},
+      "https://images.pexels.com/photos/31375756/pexels-photo-31375756.jpeg",
+      "https://images.pexels.com/photos/37060539/pexels-photo-37060539.jpeg",
+    ],
+    specifications: [
+      { name: "Profile Width", value: "75 mm" },
+      { name: "Opening Type", value: "Tilt & Turn" },
+      { name: "Material", value: "PVC" },
+      { name: "Construction", value: "Reinforced" },
+      { name: "Sealing System", value: "Center Seal" },
+      { name: "Air Permeability", value: "Class 4" },
+      { name: "Water Tightness", value: "Class 9A" },
+      { name: "Wind Load Resistance", value: "Class C4" },
+      { name: "Sound Insulation", value: "Up to 38 dB" },
+      { name: "Thermal Insulation", value: "High" },
+      { name: "Glazing Thickness", value: "20–40 mm" },
+    ],
+  },
 
-{
+  {
     id: 5,
     title: "Garnet 70",
     category: "Windows",
@@ -183,39 +200,43 @@ const products = [
     material: "PVC",
     opening: "Tilt & Turn",
     slug: "garnet-70",
-    desc:
-        "A practical and versatile PVC window system designed to provide dependable performance for everyday residential applications.",
+    desc: "A practical and versatile PVC window system designed to provide dependable performance for everyday residential applications.",
     features: [
-        "70 mm profile width",
-        "Multi-chamber construction",
-        "Thermal insulation",
-        "Sound reduction",
-        "Easy maintenance"
+      "70 mm profile width",
+      "Multi-chamber construction",
+      "Thermal insulation",
+      "Sound reduction",
+      "Easy maintenance",
     ],
     performance: {
-        thermalInsulation: "Medium-High",
-        soundInsulation: "Up to 36 dB",
-        security: "Enhanced",
-        maintenance: "Low"
+      thermalInsulation: "Medium-High",
+      soundInsulation: "Up to 36 dB",
+      security: "Enhanced",
+      maintenance: "Low",
     },
-    colors: [
-        "White",
-        "Golden Oak",
-        "Walnut"
-    ],
-    applications: [
-        "Apartments",
-        "Houses",
-        "Renovations"
-    ],
+    colors: ["White", "Golden Oak", "Walnut"],
+    applications: ["Apartments", "Houses", "Renovations"],
     featured: false,
     images: [
-        "https://images.pexels.com/photos/28169025/pexels-photo-28169025.jpeg",
-        "https://images.pexels.com/photos/30020797/pexels-photo-30020797.jpeg"
-    ]
-},
+      "https://images.pexels.com/photos/28169025/pexels-photo-28169025.jpeg",
+      "https://images.pexels.com/photos/30020797/pexels-photo-30020797.jpeg",
+    ],
+    specifications: [
+      { name: "Profile Width", value: "70 mm" },
+      { name: "Opening Type", value: "Tilt & Turn" },
+      { name: "Material", value: "PVC" },
+      { name: "Profile Design", value: "Multi-Chamber" },
+      { name: "Sealing System", value: "Center Seal" },
+      { name: "Air Permeability", value: "Class 4" },
+      { name: "Water Tightness", value: "Class 8A" },
+      { name: "Wind Load Resistance", value: "Class C3" },
+      { name: "Sound Insulation", value: "Up to 36 dB" },
+      { name: "Thermal Insulation", value: "Medium–High" },
+      { name: "Glazing Thickness", value: "20–40 mm" },
+    ],
+  },
 
-{
+  {
     id: 6,
     title: "Garnet 70 Selective",
     category: "Windows",
@@ -224,43 +245,51 @@ const products = [
     material: "PVC",
     opening: "Tilt & Turn",
     slug: "garnet-70-selective",
-    desc:
-        "An energy-conscious window system combining practical PVC construction with glazing options designed to improve indoor comfort.",
+    desc: "An energy-conscious window system combining practical PVC construction with glazing options designed to improve indoor comfort.",
     features: [
-        "70 mm profile width",
-        "Selective glazing compatibility",
-        "Thermal insulation",
-        "Reduced heat transfer",
-        "Tilt & turn operation"
+      "70 mm profile width",
+      "Selective glazing compatibility",
+      "Thermal insulation",
+      "Reduced heat transfer",
+      "Tilt & turn operation",
     ],
     performance: {
-        thermalInsulation: "High",
-        soundInsulation: "Up to 36 dB",
-        security: "Enhanced",
-        maintenance: "Low"
+      thermalInsulation: "High",
+      soundInsulation: "Up to 36 dB",
+      security: "Enhanced",
+      maintenance: "Low",
     },
-    colors: [
-        "White",
-        "Anthracite",
-        "Golden Oak"
-    ],
+    colors: ["White", "Anthracite", "Golden Oak"],
     applications: [
-        "Energy-conscious homes",
-        "Apartments",
-        "Renovation projects"
+      "Energy-conscious homes",
+      "Apartments",
+      "Renovation projects",
     ],
     featured: false,
     images: [
-        "https://images.pexels.com/photos/31344221/pexels-photo-31344221.jpeg",
-        "https://images.pexels.com/photos/20295564/pexels-photo-20295564.jpeg"
-    ]
-},
+      "https://images.pexels.com/photos/31344221/pexels-photo-31344221.jpeg",
+      "https://images.pexels.com/photos/20295564/pexels-photo-20295564.jpeg",
+    ],
+    specifications: [
+      { name: "Profile Width", value: "70 mm" },
+      { name: "Opening Type", value: "Tilt & Turn" },
+      { name: "Material", value: "PVC" },
+      { name: "Glazing", value: "Selective Glazing Compatible" },
+      { name: "Sealing System", value: "Center Seal" },
+      { name: "Air Permeability", value: "Class 4" },
+      { name: "Water Tightness", value: "Class 8A" },
+      { name: "Wind Load Resistance", value: "Class C3" },
+      { name: "Sound Insulation", value: "Up to 36 dB" },
+      { name: "Thermal Insulation", value: "High" },
+      { name: "Reduced Heat Transfer", value: "Yes" },
+    ],
+  },
 
-// =====================================================
-// SLIDING WINDOWS & DOORS
-// =====================================================
+  // =====================================================
+  // SLIDING WINDOWS & DOORS
+  // =====================================================
 
-{
+  {
     id: 7,
     title: "Zenia Sliding System",
     category: "Windows",
@@ -269,41 +298,47 @@ const products = [
     material: "PVC",
     opening: "Sliding",
     slug: "zenia-sliding-system",
-    desc:
-        "A practical sliding system designed for balconies, terraces, and large openings where space-efficient operation is essential.",
+    desc: "A practical sliding system designed for balconies, terraces, and large openings where space-efficient operation is essential.",
     features: [
-        "Sliding operation",
-        "EPDM sealing",
-        "Large opening capability",
-        "Smooth operation",
-        "Thermal insulation"
+      "Sliding operation",
+      "EPDM sealing",
+      "Large opening capability",
+      "Smooth operation",
+      "Thermal insulation",
     ],
     performance: {
-        thermalInsulation: "High",
-        soundInsulation: "Up to 32 dB",
-        security: "Enhanced",
-        maintenance: "Low"
+      thermalInsulation: "High",
+      soundInsulation: "Up to 32 dB",
+      security: "Enhanced",
+      maintenance: "Low",
     },
-    colors: [
-        "White",
-        "Anthracite",
-        "Black",
-        "Wood Effects"
-    ],
+    colors: ["White", "Anthracite", "Black", "Wood Effects"],
     applications: [
-        "Balconies",
-        "Terraces",
-        "Patios",
-        "Large residential openings"
+      "Balconies",
+      "Terraces",
+      "Patios",
+      "Large residential openings",
     ],
     featured: true,
     images: [
-        "https://images.pexels.com/photos/4716777/pexels-photo-4716777.jpeg",
-        "https://images.pexels.com/photos/34574609/pexels-photo-34574609.jpeg"
-    ]
-},
+      "https://images.pexels.com/photos/4716777/pexels-photo-4716777.jpeg",
+      "https://images.pexels.com/photos/34574609/pexels-photo-34574609.jpeg",
+    ],
+    specifications: [
+      { name: "System Type", value: "Sliding" },
+      { name: "Profile Material", value: "PVC" },
+      { name: "Opening Type", value: "Sliding" },
+      { name: "Sealing System", value: "EPDM Seals" },
+      { name: "Air Permeability", value: "Class 4" },
+      { name: "Water Tightness", value: "Class 8A" },
+      { name: "Wind Load Resistance", value: "Class C3" },
+      { name: "Sound Insulation", value: "Up to 32 dB" },
+      { name: "Thermal Insulation", value: "High" },
+      { name: "Glazing Options", value: "20–24 mm" },
+    ],
+  },
 
-{
+  {
     id: 8,
     title: "Zenia Hebeschiebe",
     category: "Doors",
@@ -312,45 +347,54 @@ const products = [
     material: "PVC",
     opening: "Lift & Slide",
     slug: "zenia-hebeschiebe",
-    desc:
-        "A premium lift-and-slide system designed for expansive architectural openings, combining smooth operation with high insulation performance.",
+    desc: "A premium lift-and-slide system designed for expansive architectural openings, combining smooth operation with high insulation performance.",
     features: [
-        "Lift & slide operation",
-        "Large glass areas",
-        "High insulation",
-        "Smooth movement",
-        "Contemporary appearance"
+      "Lift & slide operation",
+      "Large glass areas",
+      "High insulation",
+      "Smooth movement",
+      "Contemporary appearance",
     ],
     performance: {
-        thermalInsulation: "Very High",
-        soundInsulation: "Up to 40 dB",
-        security: "High",
-        maintenance: "Low"
+      thermalInsulation: "Very High",
+      soundInsulation: "Up to 40 dB",
+      security: "High",
+      maintenance: "Low",
     },
-    colors: [
-        "White",
-        "Anthracite",
-        "Black",
-        "Wood Effects"
-    ],
+    colors: ["White", "Anthracite", "Black", "Wood Effects"],
     applications: [
-        "Luxury villas",
-        "Modern houses",
-        "Hotels",
-        "Prestige projects"
+      "Luxury villas",
+      "Modern houses",
+      "Hotels",
+      "Prestige projects",
     ],
     featured: true,
     images: [
-        "https://images.pexels.com/photos/34574609/pexels-photo-34574609.jpeg",
-        "https://images.pexels.com/photos/4716777/pexels-photo-4716777.jpeg"
-    ]
-},
+      "https://images.pexels.com/photos/34574609/pexels-photo-34574609.jpeg",
+      "https://images.pexels.com/photos/4716777/pexels-photo-4716777.jpeg",
+    ],
+    specifications: [
+      { name: "Frame Width", value: "125 mm" },
+      { name: "Sash Width", value: "50 mm" },
+      { name: "Opening Type", value: "Lift & Slide" },
+      { name: "Sealing System", value: "EPDM Seals" },
+      { name: "Air Permeability", value: "Class 4" },
+      { name: "Water Tightness", value: "Class 9A" },
+      { name: "Wind Load Resistance", value: "Class C3" },
+      { name: "Sound Insulation", value: "Up to 40 dB" },
+      { name: "Profile Thermal Coefficient", value: "Uf 1.7 W/m²K" },
+      { name: "Window Thermal Coefficient", value: "Uw 1.6 W/m²K" },
+      { name: "Glazing Thickness", value: "20 / 24 mm" },
+      { name: "Sash Load Capacity", value: "Up to 300 kg" },
+      { name: "Threshold Height", value: "30 mm" },
+    ],
+  },
 
-// =====================================================
-// DOORS
-// =====================================================
+  // =====================================================
+  // DOORS
+  // =====================================================
 
-{
+  {
     id: 9,
     title: "Modern Entrance Door",
     category: "Doors",
@@ -359,40 +403,43 @@ const products = [
     material: "PVC",
     opening: "Single Opening",
     slug: "modern-entrance-door",
-    desc:
-        "A contemporary entrance door designed to provide security, insulation, and a strong architectural first impression.",
+    desc: "A contemporary entrance door designed to provide security, insulation, and a strong architectural first impression.",
     features: [
-        "Reinforced frame",
-        "Multi-point locking",
-        "Thermal insulation",
-        "Weather resistance",
-        "Custom color options"
+      "Reinforced frame",
+      "Multi-point locking",
+      "Thermal insulation",
+      "Weather resistance",
+      "Custom color options",
     ],
     performance: {
-        thermalInsulation: "High",
-        soundInsulation: "Up to 38 dB",
-        security: "High",
-        maintenance: "Low"
+      thermalInsulation: "High",
+      soundInsulation: "Up to 38 dB",
+      security: "High",
+      maintenance: "Low",
     },
-    colors: [
-        "White",
-        "Anthracite",
-        "Black",
-        "Walnut"
-    ],
-    applications: [
-        "Houses",
-        "Villas",
-        "Apartments"
-    ],
+    colors: ["White", "Anthracite", "Black", "Walnut"],
+    applications: ["Houses", "Villas", "Apartments"],
     featured: true,
     images: [
-        "https://images.pexels.com/photos/14473771/pexels-photo-14473771.jpeg",
-        "https://images.pexels.com/photos/13011441/pexels-photo-13011441.jpeg"
-    ]
-},
+      "https://images.pexels.com/photos/14473771/pexels-photo-14473771.jpeg",
+      "https://images.pexels.com/photos/13011441/pexels-photo-13011441.jpeg",
+    ],
+    specifications: [
+      { name: "Door Type", value: "Entrance Door" },
+      { name: "Material", value: "PVC" },
+      { name: "Opening Type", value: "Single Opening" },
+      { name: "Frame Construction", value: "Reinforced" },
+      { name: "Locking System", value: "Multi-Point Locking" },
+      { name: "Air Permeability", value: "Class 4" },
+      { name: "Water Tightness", value: "Class 8A" },
+      { name: "Wind Load Resistance", value: "Class C3" },
+      { name: "Sound Insulation", value: "Up to 38 dB" },
+      { name: "Thermal Insulation", value: "High" },
+      { name: "Security Level", value: "High" },
+    ],
+  },
 
-{
+  {
     id: 10,
     title: "Balcony Door System",
     category: "Doors",
@@ -401,41 +448,43 @@ const products = [
     material: "PVC",
     opening: "Tilt & Turn",
     slug: "balcony-door-system",
-    desc:
-        "A versatile balcony door system designed to provide comfortable access to outdoor spaces while maintaining insulation and security.",
+    desc: "A versatile balcony door system designed to provide comfortable access to outdoor spaces while maintaining insulation and security.",
     features: [
-        "Tilt & turn operation",
-        "Multi-point locking",
-        "Thermal insulation",
-        "Slim visual lines",
-        "Low maintenance"
+      "Tilt & turn operation",
+      "Multi-point locking",
+      "Thermal insulation",
+      "Slim visual lines",
+      "Low maintenance",
     ],
     performance: {
-        thermalInsulation: "High",
-        soundInsulation: "Up to 38 dB",
-        security: "Enhanced",
-        maintenance: "Low"
+      thermalInsulation: "High",
+      soundInsulation: "Up to 38 dB",
+      security: "Enhanced",
+      maintenance: "Low",
     },
-    colors: [
-        "White",
-        "Anthracite",
-        "Golden Oak",
-        "Walnut"
-    ],
-    applications: [
-        "Balconies",
-        "Terraces",
-        "Apartments",
-        "Houses"
-    ],
+    colors: ["White", "Anthracite", "Golden Oak", "Walnut"],
+    applications: ["Balconies", "Terraces", "Apartments", "Houses"],
     featured: false,
     images: [
-        "https://images.pexels.com/photos/5571594/pexels-photo-5571594.jpeg",
-        "https://images.pexels.com/photos/7446064/pexels-photo-7446064.jpeg"
-    ]
-},
+      "https://images.pexels.com/photos/5571594/pexels-photo-5571594.jpeg",
+      "https://images.pexels.com/photos/7446064/pexels-photo-7446064.jpeg",
+    ],
+    specifications: [
+      { name: "Door Type", value: "Balcony Door" },
+      { name: "Material", value: "PVC" },
+      { name: "Opening Type", value: "Tilt & Turn" },
+      { name: "Locking System", value: "Multi-Point Locking" },
+      { name: "Sealing System", value: "Multi-Seal" },
+      { name: "Air Permeability", value: "Class 4" },
+      { name: "Water Tightness", value: "Class 8A" },
+      { name: "Wind Load Resistance", value: "Class C3" },
+      { name: "Sound Insulation", value: "Up to 38 dB" },
+      { name: "Thermal Insulation", value: "High" },
+      { name: "Maintenance", value: "Low" },
+    ],
+  },
 
-{
+  {
     id: 11,
     title: "Sliding Patio Door",
     category: "Doors",
@@ -444,41 +493,43 @@ const products = [
     material: "PVC",
     opening: "Sliding",
     slug: "sliding-patio-door",
-    desc:
-        "A spacious sliding door solution that connects interior living areas with balconies, patios, and gardens.",
+    desc: "A spacious sliding door solution that connects interior living areas with balconies, patios, and gardens.",
     features: [
-        "Wide opening",
-        "Sliding operation",
-        "Thermal insulation",
-        "Weather resistance",
-        "Large glazing areas"
+      "Wide opening",
+      "Sliding operation",
+      "Thermal insulation",
+      "Weather resistance",
+      "Large glazing areas",
     ],
     performance: {
-        thermalInsulation: "High",
-        soundInsulation: "Up to 32 dB",
-        security: "Enhanced",
-        maintenance: "Low"
+      thermalInsulation: "High",
+      soundInsulation: "Up to 32 dB",
+      security: "Enhanced",
+      maintenance: "Low",
     },
-    colors: [
-        "White",
-        "Anthracite",
-        "Black",
-        "Wood Effects"
-    ],
-    applications: [
-        "Patios",
-        "Gardens",
-        "Terraces",
-        "Modern residences"
-    ],
+    colors: ["White", "Anthracite", "Black", "Wood Effects"],
+    applications: ["Patios", "Gardens", "Terraces", "Modern residences"],
     featured: true,
     images: [
-        "https://images.pexels.com/photos/4716777/pexels-photo-4716777.jpeg",
-        "https://images.pexels.com/photos/10053931/pexels-photo-10053931.jpeg"
-    ]
-},
+      "https://images.pexels.com/photos/4716777/pexels-photo-4716777.jpeg",
+      "https://images.pexels.com/photos/10053931/pexels-photo-10053931.jpeg",
+    ],
+    specifications: [
+      { name: "Door Type", value: "Patio Door" },
+      { name: "Material", value: "PVC" },
+      { name: "Opening Type", value: "Sliding" },
+      { name: "Glazing", value: "Large Glass Areas" },
+      { name: "Sealing System", value: "EPDM Seals" },
+      { name: "Air Permeability", value: "Class 4" },
+      { name: "Water Tightness", value: "Class 8A" },
+      { name: "Wind Load Resistance", value: "Class C3" },
+      { name: "Sound Insulation", value: "Up to 32 dB" },
+      { name: "Thermal Insulation", value: "High" },
+      { name: "Opening Width", value: "Large Opening" },
+    ],
+  },
 
-{
+  {
     id: 12,
     title: "French Door System",
     category: "Doors",
@@ -487,45 +538,47 @@ const products = [
     material: "PVC",
     opening: "Double Opening",
     slug: "french-door-system",
-    desc:
-        "A classic double-door configuration adapted for contemporary homes, offering wide access and generous natural light.",
+    desc: "A classic double-door configuration adapted for contemporary homes, offering wide access and generous natural light.",
     features: [
-        "Double opening",
-        "Wide access",
-        "Multi-point locking",
-        "Thermal insulation",
-        "Custom finishes"
+      "Double opening",
+      "Wide access",
+      "Multi-point locking",
+      "Thermal insulation",
+      "Custom finishes",
     ],
     performance: {
-        thermalInsulation: "High",
-        soundInsulation: "Up to 38 dB",
-        security: "Enhanced",
-        maintenance: "Low"
+      thermalInsulation: "High",
+      soundInsulation: "Up to 38 dB",
+      security: "Enhanced",
+      maintenance: "Low",
     },
-    colors: [
-        "White",
-        "Anthracite",
-        "Golden Oak",
-        "Walnut"
-    ],
-    applications: [
-        "Living rooms",
-        "Gardens",
-        "Balconies",
-        "Terraces"
-    ],
+    colors: ["White", "Anthracite", "Golden Oak", "Walnut"],
+    applications: ["Living rooms", "Gardens", "Balconies", "Terraces"],
     featured: false,
     images: [
-        "https://images.pexels.com/photos/7446064/pexels-photo-7446064.jpeg",
-        "https://images.pexels.com/photos/14788842/pexels-photo-14788842.jpeg"
-    ]
-},
+      "https://images.pexels.com/photos/7446064/pexels-photo-7446064.jpeg",
+      "https://images.pexels.com/photos/14788842/pexels-photo-14788842.jpeg",
+    ],
+    specifications: [
+      { name: "Door Type", value: "French Door" },
+      { name: "Material", value: "PVC" },
+      { name: "Opening Type", value: "Double Opening" },
+      { name: "Locking System", value: "Multi-Point Locking" },
+      { name: "Sealing System", value: "Multi-Seal" },
+      { name: "Air Permeability", value: "Class 4" },
+      { name: "Water Tightness", value: "Class 8A" },
+      { name: "Wind Load Resistance", value: "Class C3" },
+      { name: "Sound Insulation", value: "Up to 38 dB" },
+      { name: "Thermal Insulation", value: "High" },
+      { name: "Glazing", value: "Double Glazing Compatible" },
+    ],
+  },
 
-// =====================================================
-// SPECIAL WINDOW SYSTEMS
-// =====================================================
+  // =====================================================
+  // SPECIAL WINDOW SYSTEMS
+  // =====================================================
 
-{
+  {
     id: 13,
     title: "Guillotine Window",
     category: "Windows",
@@ -534,40 +587,48 @@ const products = [
     material: "PVC",
     opening: "Vertical Sliding",
     slug: "guillotine-window",
-    desc:
-        "A distinctive vertically sliding window system suited to architectural projects seeking a functional alternative to conventional openings.",
+    desc: "A distinctive vertically sliding window system suited to architectural projects seeking a functional alternative to conventional openings.",
     features: [
-        "Vertical sliding operation",
-        "Space-saving design",
-        "Large glass surfaces",
-        "Contemporary appearance",
-        "Custom configurations"
+      "Vertical sliding operation",
+      "Space-saving design",
+      "Large glass surfaces",
+      "Contemporary appearance",
+      "Custom configurations",
     ],
     performance: {
-        thermalInsulation: "High",
-        soundInsulation: "Up to 35 dB",
-        security: "Enhanced",
-        maintenance: "Low"
+      thermalInsulation: "High",
+      soundInsulation: "Up to 35 dB",
+      security: "Enhanced",
+      maintenance: "Low",
     },
-    colors: [
-        "White",
-        "Anthracite",
-        "Black"
-    ],
+    colors: ["White", "Anthracite", "Black"],
     applications: [
-        "Restaurants",
-        "Terraces",
-        "Modern homes",
-        "Architectural projects"
+      "Restaurants",
+      "Terraces",
+      "Modern homes",
+      "Architectural projects",
     ],
     featured: true,
     images: [
-        "https://images.pexels.com/photos/19013702/pexels-photo-19013702.jpeg",
-        "https://images.pexels.com/photos/1005477/pexels-photo-1005477.jpeg"
-    ]
-},
+      "https://images.pexels.com/photos/19013702/pexels-photo-19013702.jpeg",
+      "https://images.pexels.com/photos/1005477/pexels-photo-1005477.jpeg",
+    ],
+    specifications: [
+      { name: "System Type", value: "Guillotine Window" },
+      { name: "Material", value: "PVC" },
+      { name: "Opening Type", value: "Vertical Sliding" },
+      { name: "Profile Design", value: "Multi-Chamber" },
+      { name: "Sealing System", value: "Weather-Resistant Seals" },
+      { name: "Air Permeability", value: "Class 4" },
+      { name: "Water Tightness", value: "Class 8A" },
+      { name: "Wind Load Resistance", value: "Class C3" },
+      { name: "Sound Insulation", value: "Up to 35 dB" },
+      { name: "Thermal Insulation", value: "High" },
+      { name: "Glazing", value: "Large Glass Areas" },
+    ],
+  },
 
-{
+  {
     id: 14,
     title: "Outward Opening Window",
     category: "Windows",
@@ -576,44 +637,51 @@ const products = [
     material: "PVC",
     opening: "Outward",
     slug: "outward-opening-window",
-    desc:
-        "An outward-opening window solution designed for architectural applications requiring an alternative opening direction and flexible ventilation.",
+    desc: "An outward-opening window solution designed for architectural applications requiring an alternative opening direction and flexible ventilation.",
     features: [
-        "Outward opening",
-        "Flexible ventilation",
-        "Architectural configuration",
-        "Weather-resistant seals",
-        "Custom dimensions"
+      "Outward opening",
+      "Flexible ventilation",
+      "Architectural configuration",
+      "Weather-resistant seals",
+      "Custom dimensions",
     ],
     performance: {
-        thermalInsulation: "High",
-        soundInsulation: "Up to 35 dB",
-        security: "Enhanced",
-        maintenance: "Low"
+      thermalInsulation: "High",
+      soundInsulation: "Up to 35 dB",
+      security: "Enhanced",
+      maintenance: "Low",
     },
-    colors: [
-        "White",
-        "Anthracite",
-        "Black",
-        "Wood Effects"
-    ],
+    colors: ["White", "Anthracite", "Black", "Wood Effects"],
     applications: [
-        "Commercial buildings",
-        "Modern residences",
-        "Architectural projects"
+      "Commercial buildings",
+      "Modern residences",
+      "Architectural projects",
     ],
     featured: false,
     images: [
-        "https://images.pexels.com/photos/28169025/pexels-photo-28169025.jpeg",
-        "https://images.pexels.com/photos/31344221/pexels-photo-31344221.jpeg"
-    ]
-},
+      "https://images.pexels.com/photos/28169025/pexels-photo-28169025.jpeg",
+      "https://images.pexels.com/photos/31344221/pexels-photo-31344221.jpeg",
+    ],
+    specifications: [
+      { name: "System Type", value: "Outward Opening Window" },
+      { name: "Material", value: "PVC" },
+      { name: "Opening Type", value: "Outward Opening" },
+      { name: "Profile Design", value: "Architectural" },
+      { name: "Sealing System", value: "Weather-Resistant Seals" },
+      { name: "Air Permeability", value: "Class 4" },
+      { name: "Water Tightness", value: "Class 8A" },
+      { name: "Wind Load Resistance", value: "Class C3" },
+      { name: "Sound Insulation", value: "Up to 35 dB" },
+      { name: "Thermal Insulation", value: "High" },
+      { name: "Custom Dimensions", value: "Available" },
+    ],
+  },
 
-// =====================================================
-// SHADING
-// =====================================================
+  // =====================================================
+  // SHADING
+  // =====================================================
 
-{
+  {
     id: 15,
     title: "Roller Shutter System",
     category: "Shading",
@@ -622,40 +690,41 @@ const products = [
     material: "PVC",
     opening: "Rolling",
     slug: "roller-shutter-system",
-    desc:
-        "A practical shading and protection system designed to improve privacy, daylight control, and protection from external conditions.",
+    desc: "A practical shading and protection system designed to improve privacy, daylight control, and protection from external conditions.",
     features: [
-        "External shading",
-        "Privacy control",
-        "Sun protection",
-        "Weather protection",
-        "Multiple color options"
+      "External shading",
+      "Privacy control",
+      "Sun protection",
+      "Weather protection",
+      "Multiple color options",
     ],
     performance: {
-        thermalInsulation: "Medium-High",
-        soundInsulation: "Additional reduction",
-        security: "Enhanced",
-        maintenance: "Low"
+      thermalInsulation: "Medium-High",
+      soundInsulation: "Additional reduction",
+      security: "Enhanced",
+      maintenance: "Low",
     },
-    colors: [
-        "White",
-        "Anthracite",
-        "Beige",
-        "Wood Effects"
-    ],
-    applications: [
-        "Houses",
-        "Apartments",
-        "Offices",
-        "Commercial buildings"
-    ],
+    colors: ["White", "Anthracite", "Beige", "Wood Effects"],
+    applications: ["Houses", "Apartments", "Offices", "Commercial buildings"],
     featured: false,
     images: [
-        "https://images.pexels.com/photos/20295564/pexels-photo-20295564.jpeg",
-        "https://images.pexels.com/photos/31344221/pexels-photo-31344221.jpeg"
-    ]
-}
-
+      "https://images.pexels.com/photos/20295564/pexels-photo-20295564.jpeg",
+      "https://images.pexels.com/photos/31344221/pexels-photo-31344221.jpeg",
+    ],
+    specifications: [
+      { name: "System Type", value: "Roller Shutter" },
+      { name: "Material", value: "PVC" },
+      { name: "Operation", value: "Rolling" },
+      { name: "Sun Protection", value: "High" },
+      { name: "Privacy Control", value: "Yes" },
+      { name: "Weather Protection", value: "Yes" },
+      { name: "Thermal Insulation", value: "Medium–High" },
+      { name: "Sound Reduction", value: "Additional Reduction" },
+      { name: "Security", value: "Enhanced" },
+      { name: "Maintenance", value: "Low" },
+      { name: "Color Options", value: "Multiple" },
+    ],
+  },
 ];
 
 export default products;
