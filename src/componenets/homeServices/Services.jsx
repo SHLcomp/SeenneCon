@@ -1,6 +1,7 @@
 import "./Services.scss";
 import data from "../../data/services.js";
 import Service from "../serviceComp/Service.jsx";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const newData = data.filter((item)=> item.featured);
@@ -15,7 +16,7 @@ const Services = () => {
           solutions, combining engineering expertise, premium materials, and
           precision craftsmanship to deliver projects that exceed expectations.
         </p>
-        <h3 className="cta2">View All</h3>
+        <Link to={"/services"} className="a"><h3 className="cta2">View All</h3></Link>
       </div>
       <div className="services-cont">
         {newData.map((service)=>{

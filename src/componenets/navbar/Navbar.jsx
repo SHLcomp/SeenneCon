@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import { useState } from "react";
 import services from "../../data/services"; // adjust path if necessary
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -17,7 +18,7 @@ const Navbar = () => {
       <div className="banner">
         <ul>
           <li>+962 123456789</li>
-          <li className="cta3">Get Quote</li>
+          <HashLink className="a" to="/contact#quote"><li className="cta3">Get Quote</li></HashLink>
         </ul>
       </div>
 

@@ -2,11 +2,13 @@
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
   font-family: var(--ff);
   overflow-x: hidden !important;
   background: #f8f8f8;
+  scroll-behavior: smooth;
 }
 
 /* shared styles */

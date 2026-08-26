@@ -1,8 +1,20 @@
 import Navbar from "../componenets/navbar/Navbar";
 import Footer from "../componenets/footer/Footer";
 import "./Contact.scss";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const Contact = () => {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) {
+      window.scrollTo({
+        top: 0,
+        behavior: "instant",
+      });
+    }
+  }, [pathname, hash]);
   return (
     <>
       <Navbar />
@@ -32,16 +44,12 @@ const Contact = () => {
             <div className="contactDetails">
               <div>
                 <span>Email</span>
-                <a href="mailto:info@example.com">
-                  info@example.com
-                </a>
+                <a href="mailto:info@example.com">info@example.com</a>
               </div>
 
               <div>
                 <span>Phone</span>
-                <a href="tel:+00000000000">
-                  +00 000 000 0000
-                </a>
+                <a href="tel:+00000000000">+00 000 000 0000</a>
               </div>
 
               <div>
@@ -64,7 +72,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="contactFormWrapper">
+          <div className="contactFormWrapper" id="quote">
             <span className="eyebrow">Send A Message</span>
 
             <form className="contactForm">
@@ -72,32 +80,20 @@ const Contact = () => {
                 <div className="formGroup">
                   <label htmlFor="name">Name</label>
 
-                  <input
-                    id="name"
-                    type="text"
-                    placeholder="Your name"
-                  />
+                  <input id="name" type="text" placeholder="Your name" />
                 </div>
 
                 <div className="formGroup">
                   <label htmlFor="email">Email</label>
 
-                  <input
-                    id="email"
-                    type="email"
-                    placeholder="Your email"
-                  />
+                  <input id="email" type="email" placeholder="Your email" />
                 </div>
               </div>
 
               <div className="formGroup">
                 <label htmlFor="company">Company</label>
 
-                <input
-                  id="company"
-                  type="text"
-                  placeholder="Company name"
-                />
+                <input id="company" type="text" placeholder="Company name" />
               </div>
 
               <div className="formGroup">

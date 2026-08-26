@@ -1,9 +1,18 @@
+import { useLocation } from "react-router-dom";
 import AllProducts from "../componenets/allProducts/AllProducts";
 import Footer from "../componenets/footer/Footer";
 import Heading from "../componenets/heading/Heading";
 import Navbar from "../componenets/navbar/Navbar";
+import { useEffect } from "react";
 
 const Products = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  }, [pathname]);
   return (
     <div>
       <Navbar />

@@ -1,8 +1,17 @@
 import Navbar from "../componenets/navbar/Navbar";
 import Footer from "../componenets/footer/Footer";
 import "./About.scss";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const About = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  }, [pathname]);
   return (
     <>
       <Navbar />
