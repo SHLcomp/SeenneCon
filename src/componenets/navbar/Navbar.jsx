@@ -150,13 +150,13 @@ const Navbar = () => {
           </li>
 
           <li>
-            <Link to="/" className="a">
+            <Link to="/about" className="a">
               About
             </Link>
           </li>
 
           <li>
-            <Link to="/" className="a">
+            <Link to="/contact" className="a">
               Contact
             </Link>
           </li>

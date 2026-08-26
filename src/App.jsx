@@ -6,6 +6,8 @@ import ServicesFilter from './componenets/filters/ServicesFilter'
 import Products from './pages/Products'
 import Projects from './pages/Projects'
 import ProductsFilter from './componenets/filters/ProductsFilter'
+import About from './pages/About'
+import Contact from './pages/Contact'
 
 function App() {
   const router = createBrowserRouter([
@@ -37,6 +39,14 @@ function App() {
       path: "/projects/:projId",
       // element:<ProductsFilter />
     },
+    {
+      path: "/about",
+      element: <About />
+    },
+    {
+      path: "/contact",
+      element: <Contact />
+    }
   
   ])
 

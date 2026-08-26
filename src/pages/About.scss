@@ -1,0 +1,358 @@
+.about {
+  width: 100%;
+  margin-top: 10em;
+  color: var(--text-color);
+
+  // =====================================================
+  // HERO
+  // =====================================================
+
+  .aboutHero {
+    min-height: 70vh;
+
+    padding: 4em 6vw 7em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+    .heading {
+      margin-top: 0;
+      gap: 15px;
+
+      .headline {
+        margin: 0;
+
+        font-size: clamp(3.5rem, 7vw, 7rem);
+        line-height: 0.9;
+      }
+    }
+
+    .heroText {
+      width: min(100%, 500px);
+
+      margin-top: 3em;
+      margin-left: 25%;
+
+      font-size: 0.85rem;
+      line-height: 1.7;
+
+      color: #444;
+    }
+  }
+
+  // =====================================================
+  // SHARED SECTION
+  // =====================================================
+
+  .sectionNumber {
+    font-family: var(--ff);
+    font-size: 10px;
+
+    color: var(--accent-color);
+  }
+
+  // =====================================================
+  // INTRO
+  // =====================================================
+
+  .aboutIntro {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+
+    gap: 5vw;
+
+    padding: 9em 6vw;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  .introContent {
+    max-width: 750px;
+
+    .eyebrow {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-bottom: 1.2em;
+
+      font-size: clamp(2rem, 4vw, 4rem);
+      line-height: 0.95;
+      font-weight: 500;
+    }
+
+    p {
+      max-width: 600px;
+
+      margin-bottom: 1.2em;
+
+      font-size: 0.8rem;
+      line-height: 1.8;
+
+      color: #444;
+    }
+  }
+
+  // =====================================================
+  // VALUES
+  // =====================================================
+
+  .aboutValues {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+
+    gap: 5vw;
+
+    padding: 9em 6vw;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  .valuesContent {
+    .heading {
+      margin-top: 0;
+      margin-bottom: 4em;
+
+      .title {
+        margin: 0;
+
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        line-height: 1;
+      }
+    }
+  }
+
+  .valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+
+    article {
+      min-height: 220px;
+
+      padding: 25px;
+
+      border-right: 1px solid rgba(0, 0, 0, 0.15);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+      > span {
+        font-size: 9px;
+        color: var(--accent-color);
+      }
+
+      h3 {
+        margin: 3em 0 1em;
+
+        font-size: 1.3rem;
+        font-weight: 500;
+      }
+
+      p {
+        max-width: 280px;
+
+        font-size: 0.72rem;
+        line-height: 1.7;
+
+        color: #555;
+      }
+    }
+  }
+
+  // =====================================================
+  // STATEMENT
+  // =====================================================
+
+  .aboutStatement {
+    min-height: 60vh;
+
+    padding: 9em 6vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .headline {
+      margin: 20px 0 30px;
+
+      font-size: clamp(3rem, 7vw, 7rem);
+      line-height: 0.9;
+    }
+
+    p {
+      max-width: 450px;
+
+      margin-left: 25%;
+
+      font-size: 0.8rem;
+      line-height: 1.8;
+
+      color: #444;
+    }
+  }
+}
+
+// =========================================================
+// TABLET
+// =========================================================
+
+@media (max-width: 900px) {
+  .about {
+    background: pink; // TEST
+
+    .aboutHero {
+      padding: 4em 4vw 6em;
+      background: pink !important; // TEST
+
+      .heroText {
+        margin-left: 15%;
+      }
+    }
+
+    .aboutIntro,
+    .aboutValues {
+      grid-template-columns: 15% 1fr;
+      padding: 7em 4vw;
+    }
+
+    .aboutStatement {
+      padding: 7em 4vw;
+
+      p {
+        margin-left: 15%;
+      }
+    }
+  }
+}
+
+
+// =========================================================
+// MOBILE
+// =========================================================
+
+@media (max-width: 600px) {
+  .about {
+    margin-top: 7em;
+
+    .aboutHero {
+      min-height: 70vh;
+      padding: 3em 1.2em 5em;
+
+      .heading {
+        gap: 12px;
+
+        .headline {
+          font-size: clamp(3rem, 14vw, 5rem);
+        }
+      }
+
+      .heroText {
+        margin-left: 0;
+        margin-top: 2.5em;
+
+        font-size: 0.75rem;
+        line-height: 1.7;
+      }
+    }
+
+    .aboutIntro,
+    .aboutValues {
+      grid-template-columns: 1fr;
+      gap: 2.5em;
+      padding: 6em 1.2em;
+    }
+
+    .introContent {
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 0.75rem;
+      }
+    }
+
+    .valuesContent {
+      .heading {
+        margin-bottom: 3em;
+
+        .title {
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    .valuesGrid {
+      grid-template-columns: 1fr;
+
+      article {
+        min-height: 190px;
+      }
+    }
+
+    .aboutStatement {
+      min-height: 60vh;
+      padding: 6em 1.2em;
+
+      .headline {
+        font-size: clamp(3rem, 14vw, 5rem);
+      }
+
+      p {
+        margin-left: 0;
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
+
+
+// =========================================================
+// VERY SMALL MOBILE
+// =========================================================
+
+@media (max-width: 400px) {
+  .about {
+    .aboutHero {
+      .heading {
+        .headline {
+          font-size: 2.9rem;
+        }
+      }
+
+      .heroText {
+        width: 100%;
+      }
+    }
+
+    .aboutIntro,
+    .aboutValues {
+      padding: 5em 1em;
+    }
+
+    .introContent,
+    .valuesContent {
+      h2,
+      .title {
+        font-size: 2.3rem;
+      }
+    }
+
+    .aboutStatement {
+      padding: 5em 1em;
+
+      .headline {
+        font-size: 2.9rem;
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
