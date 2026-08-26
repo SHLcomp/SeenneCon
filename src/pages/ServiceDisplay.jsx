@@ -50,10 +50,6 @@ const ServiceDisplay = ({ service }) => {
             </p>
           </div>
 
-          <div>
-            <span>Slug</span>
-            <p>{service.slug}</p>
-          </div>
 
           <div>
             <span>Materials</span>
